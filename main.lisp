@@ -5,6 +5,7 @@
 
 (eval-when (:load-toplevel)
   (define-foreign-library libmigemo
+    (:unix (:or "libmigemo.so.1"))
     (t (:default "libmigemo")))
 
   (unless (foreign-library-loaded-p 'libmigemo)
